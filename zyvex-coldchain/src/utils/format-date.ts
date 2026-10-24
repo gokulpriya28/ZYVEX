@@ -1,0 +1,1 @@
+export function formatDate(value: string, locale = 'en-IN'): string { const date = new Date(value); return Number.isNaN(date.getTime()) ? 'Invalid date' : new Intl.DateTimeFormat(locale,{dateStyle:'medium',timeStyle:'short'}).format(date); }

@@ -1,0 +1,1 @@
+export function temperatureStats(values: number[]) { if (!values.length) return { count: 0, min: null, max: null, average: null }; return { count: values.length, min: Math.min(...values), max: Math.max(...values), average: values.reduce((a,b)=>a+b,0)/values.length }; }

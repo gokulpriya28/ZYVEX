@@ -1,0 +1,1 @@
+export function evidenceSummary(input: { readings: number; valid: number; alerts: number; anchored: boolean }) { return { ...input, verificationRate: input.readings ? Math.round((input.valid/input.readings)*100) : null, status: input.readings === input.valid && input.anchored ? 'verified' : 'review_required' }; }

@@ -1,0 +1,1 @@
+export function readingQuality(input: { recordedAt: string; receivedAt: string; simulated: boolean }) { const lagMs = Date.parse(input.receivedAt)-Date.parse(input.recordedAt); return { simulated: input.simulated, lagMs, timestampValid: Number.isFinite(lagMs) && lagMs >= -60_000 && lagMs < 24*60*60*1000 }; }

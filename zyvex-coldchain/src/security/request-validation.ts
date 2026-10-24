@@ -1,0 +1,2 @@
+export function isPlainObject(value: unknown): value is Record<string, unknown> { return !!value && typeof value === 'object' && !Array.isArray(value); }
+export function requiredString(value: unknown, field: string, max = 200): string { if (typeof value !== 'string' || !value.trim() || value.length > max) throw new Error(`${field} must be a non-empty string up to ${max} characters`); return value.trim(); }

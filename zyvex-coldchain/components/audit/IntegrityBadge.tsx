@@ -1,0 +1,1 @@
+export function IntegrityBadge({ valid }: { valid: boolean }) { return <span className={valid ? 'integrity-valid' : 'integrity-invalid'}>{valid ? 'Integrity verified' : 'Integrity check failed'}</span>; }

@@ -1,0 +1,1 @@
+export function AnchorStatus({ anchored, txHash }: { anchored: boolean; txHash?: string }) { return <div className="anchor-status">{anchored ? `Anchored${txHash ? ` · ${txHash.slice(0, 12)}…` : ''}` : 'Not anchored'}</div>; }

@@ -1,0 +1,2 @@
+export type SimulatorProfile = { name: string; baseline: number; volatility: number; excursionChance: number };
+export function nextSimulatedTemperature(profile: SimulatorProfile, random = Math.random): number { const excursion = random() < profile.excursionChance; const drift = (random() - 0.5) * profile.volatility; return Number((profile.baseline + drift + (excursion ? (random() > .5 ? 4 : -4) : 0)).toFixed(2)); }
